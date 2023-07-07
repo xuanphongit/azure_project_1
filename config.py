@@ -5,12 +5,12 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 class Config(object):
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'secret-key'
 
-    BLOB_ACCOUNT = os.environ.get('BLOB_ACCOUNT') or 'ENTER_STORAGE_ACCOUNT_NAME'
-    BLOB_STORAGE_KEY = os.environ.get('BLOB_STORAGE_KEY') or 'ENTER_BLOB_STORAGE_KEY'
-    BLOB_CONTAINER = os.environ.get('BLOB_CONTAINER') or 'ENTER_IMAGES_CONTAINER_NAME'
+    BLOB_ACCOUNT = os.environ.get('BLOB_ACCOUNT') or 'phongmx'
+    BLOB_STORAGE_KEY = os.environ.get('BLOB_STORAGE_KEY') or 'c+mTR3EJHXp4P2hEP0dK6e1L1YfbTGAyTbxqYRdIbKu0DIM3iq7klydqa0CN8XxYohHKTz2Kz0/Y+AStsX65nA=='
+    BLOB_CONTAINER = os.environ.get('BLOB_CONTAINER') or 'image'
 
-    SQL_SERVER = os.environ.get('SQL_SERVER') or 'phongmxproject2.database.windows.net'
-    SQL_DATABASE = os.environ.get('SQL_DATABASE') or 'project2'
+    SQL_SERVER = os.environ.get('SQL_SERVER') or 'phongmxprojectone.database.windows.net'
+    SQL_DATABASE = os.environ.get('SQL_DATABASE') or 'phongmxprojectone'
     SQL_USER_NAME = os.environ.get('SQL_USER_NAME') or 'phongmxadmin'
     SQL_PASSWORD = os.environ.get('SQL_PASSWORD') or 'Password11'
     # Below URI may need some adjustments for driver version, based on your OS, if running locally
