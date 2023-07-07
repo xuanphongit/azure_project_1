@@ -1,4 +1,3 @@
-
 import logging
 from flask import Flask
 from config import Config
@@ -7,16 +6,18 @@ from flask_login import LoginManager
 from flask_session import Session
 
 app = Flask(__name__)
-app.config.from_object(Config)
-db = SQLAlchemy(app)
-wsgi_app = app.wsgi_app
+app.config.from_object(Config)\
 
-app.logger.setLevel(logging.WARNING)
+app.logger.setLevel(logging.DEBUG)
 streamHandler = logging.StreamHandler()
-streamHandler.setLevel(logging.WARNING)
+handler = logging.StreamHandler()
+streamHandler.setLevel(logging.DEBUG)
+handler.setLevel(logging.DEBUG)
 app.logger.addHandler(streamHandler)
-Session(app)
 
+
+Session(app)
+db = SQLAlchemy(app)
 login = LoginManager(app)
 login.login_view = 'login'
 
