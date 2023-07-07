@@ -55,7 +55,7 @@ def post(id):
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    app.logger.warning('login')
+    app.logger.info('login')
     if current_user.is_authenticated:
         return redirect(url_for('home'))
     form = LoginForm()
@@ -99,7 +99,7 @@ def authorized():
 @app.route('/logout')
 def logout():
     logout_user()
-    app.logger.warning('logout_user.')
+    app.logger.info('logout_user.')
     if session.get("user"): # Used MS Login
         session.clear()
         return redirect(
