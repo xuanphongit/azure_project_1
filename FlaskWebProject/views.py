@@ -130,5 +130,5 @@ def _build_auth_url(authority=None, scopes=None, state=None):
     return app.get_authorization_request_url(
         scopes or [],
         state=state or str(uuid.uuid4()),
-        redirect_uri=url_for('authorized', _external=True)
+        redirect_uri = url_for('authorized', _external=True, _scheme='https')
     )
