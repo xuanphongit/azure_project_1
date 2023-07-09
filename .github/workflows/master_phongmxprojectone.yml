@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'phongmxprojectone'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_39294EB7E82C4CB8AF481AFA0CB99C8A }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_76541BC2B1FD4FC0B06D3BC1D25BDD3F }}
